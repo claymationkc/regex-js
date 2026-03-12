@@ -2,6 +2,32 @@
 
 A hands-on JavaScript regex reference. Run any file with `node <filename>`.
 
+## Why Learn Regex?
+
+A regular expression is a pattern that describes text. Once you know regex, a huge class of problems that would otherwise require writing loops, conditionals, and string manipulation collapse into a single line.
+
+**Input validation** — check that a value looks right before you use it. Email addresses, phone numbers, zip codes, credit cards, dates, URLs, hex colors — all of these have well-known regex patterns that take seconds to apply and would take dozens of lines to replicate manually.
+
+**Search and extraction** — pull structured data out of unstructured text. Scrape values from log files, parse config files, extract all URLs from a document, find every TODO comment in a codebase. Regex lets you describe *what* you're looking for rather than writing a parser from scratch.
+
+**Find and replace** — transform text in ways that simple string replacement can't handle. Reformat dates from `YYYY-MM-DD` to `MM/DD/YYYY`, convert camelCase to snake_case, add commas to large numbers, mask sensitive data like credit card digits.
+
+**Splitting and tokenizing** — break strings apart on complex delimiters, not just a single character. Split on any whitespace, split on commas or semicolons interchangeably, split while preserving the delimiter.
+
+**Code and text tooling** — most editors, grep, sed, awk, and database engines all support regex. Learning it once means you can use it everywhere: VS Code's search, terminal pipelines, SQL `LIKE`/`REGEXP`, nginx rules, CI config matchers.
+
+### When regex is the right tool
+
+- The structure of the text is well-defined and consistent
+- You need to validate, extract, or transform text in one pass
+- You're working in a context where a regex engine is already available (which is almost everywhere)
+
+### When to use something else
+
+- Parsing deeply nested structures like HTML or JSON — use a proper parser
+- The pattern is so complex it becomes unreadable — break it up or use a parser combinator
+- Performance is critical at very high scale — benchmark first, regex is often fast but not always the fastest
+
 ## Files
 
 | File | Topics |
